@@ -6,7 +6,7 @@ def girisyapma():
     sifre = sifregiris.get()
     isim = isimgiris.get()
     if (sifre == asilsifre and isim == asilisim):
-        girisdurumu.config(text="Doğru")
+        girisdurumu.config(text="Doğru"+sayi)
     else:
         girisdurumu.config(text="Yanlış")
 
@@ -20,7 +20,7 @@ sifre.grid(row=1,column=0)
 sifregiris.grid(row=1,column=1)
 sifremihatirla =Checkbutton(pencere,text="şifremi hatırla")
 sifremihatirla.grid(row=2,columnspan=2)
-giris = Button(pencere,text="giriş",command=girisyapma)
+giris = Button(pencere,text="giriş",command=girisyapma())
 giris.grid(row=3,column=1)
 girisdurumu = Label(pencere,text="")
 girisdurumu.grid(row=3,column=2)
